@@ -141,3 +141,15 @@ body.public-mode{--paper:#F7F4ED;--ink:#252A2D;--muted:#53656D;--line:#D7E1DF;--
 #publica .hero .actions{max-width:none}
 .public-mode .chat-launch{max-width:205px;font-size:11px;padding:12px 15px}
 }
+
+/* Phase 2: brighter Atlantic canvas. Sand is now an accent, not the page background. */
+body.public-mode{--paper:#FCFCFA;--cream:#F2EEE5;background:#FCFCFA}
+.public-mode .header{background:#FCFCFA}
+.public-mode .demo-bar{background:#F7F8F5}
+#publica{background:#FCFCFA;--paper:#FCFCFA;--cream:#F2EEE5}
+#publica .hero{background:#FCFCFA}
+#publica .pickup{background:#FCFCFA}
+#publica .social-section{background:#F7F8F5}
+.public-mode footer{background:#FCFCFA}
+#publica .hero-shade{background:linear-gradient(180deg,rgba(252,252,250,.94),rgba(252,252,250,.7) 70%,rgba(252,252,250,0))}
+@media(max-width:1050px){#publica .hero-copy{background:#FCFCFA}}
