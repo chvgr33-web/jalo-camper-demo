@@ -10,7 +10,6 @@
 // Phase 2 public-content cleanup. Do not alter private/demo views or the approved hero image.
 (()=>{
  const pub=document.getElementById('publica'); if(!pub)return;
- // The old interior stock image is deliberately suppressed on the public website.
  pub.querySelectorAll('img[src="assets/interior.jpg"]').forEach(img=>{const box=img.closest('.photo-card,.editorial-image,.preview-project');if(box)box.classList.add('public-image-placeholder');img.remove();});
  const camper=pub.querySelector('#camperizacion');
  if(camper){
@@ -24,4 +23,16 @@
  if(inspiration){const visual=inspiration.querySelector('.editorial-image');if(visual){visual.classList.add('public-image-placeholder');const s=visual.querySelector('span');if(s)s.textContent='PROYECTOS REALES · REDES JALO CAMPER';}}
  const portal=pub.querySelector('.portal-promo');
  if(portal){const p=portal.querySelector(':scope>div>p:not(.eyebrow)');if(p)p.textContent='Tu espacio personal para ver el avance y las fotos del proyecto, consultar presupuesto y documentos, aprobar decisiones o extras y coordinar citas, recogida, entrega y posventa.';}
+
+ // Conversion hierarchy: explain the next step instead of adding more competing CTAs.
+ const process=pub.querySelector('.process');
+ if(process){const cards=process.querySelectorAll('.process-grid article');const copy=[['Cuéntanos tu idea','Vehículo, necesidades, forma de viajar y punto de partida.'],['Definimos el proyecto','Jalo concreta contigo distribución, soluciones y presupuesto antes de empezar.'],['Lo construimos contigo','El trabajo avanza en taller y puedes seguir hitos, fotografías y decisiones desde tu área personal.'],['Revisamos y entregamos','Revisión final, documentación y coordinación de entrega. Después, Jalo sigue disponible para posventa y mejoras.']];cards.forEach((c,i)=>{if(!copy[i])return;const h=c.querySelector('h3'),p=c.querySelector('p');if(h)h.textContent=copy[i][0];if(p)p.textContent=copy[i][1];});}
+ const reviews=pub.querySelector('#opiniones');
+ if(reviews){const p=reviews.querySelector('div:nth-child(2)>p');if(p)p.textContent='Antes de decidir, mira lo que cuentan quienes ya han confiado en Jalo Camper. Las opiniones se consultan directamente en Google; aquí no inventamos testimonios.';const info=reviews.querySelector('[data-info="opiniones"]');if(info)info.remove();}
+ const appointment=pub.querySelector('#citas');
+ if(appointment){const h=appointment.querySelector('h2');if(h)h.innerHTML='Primero hablamos.<br><em>Después diseñamos.</em>';const p=appointment.querySelector('.social-copy>p:not(.eyebrow)');if(p)p.textContent='Cuéntanos qué vehículo tienes, qué quieres conseguir y cómo viajas. Puedes empezar con una llamada o concertar una visita al taller de Tarifa.';const b=appointment.querySelector('[data-action="cita"]');if(b)b.textContent='CONSULTAR CITA →';}
+ const faq=pub.querySelector('.faq');
+ if(faq){const details=faq.querySelectorAll('details');const qs=[['¿Necesito tener ya la furgoneta?','No necesariamente. Puedes consultar tu idea antes de decidir el vehículo; el equipo podrá orientarte sobre las necesidades del proyecto.'],['¿Puedo seguir el proyecto sin estar en Tarifa?','Sí. La propuesta incluye un Área Cliente para consultar avances, fotografías, documentos y decisiones pendientes durante el trabajo.'],['¿Podéis recoger y devolver mi vehículo?','Puedes solicitar recogida y entrega. Jalo confirma contigo disponibilidad, cobertura y condiciones según el punto de recogida y el proyecto.'],['¿Cómo se calculan el precio y el plazo?','Cada camperización depende del vehículo y del alcance. Primero se revisan tus necesidades y después Jalo concreta presupuesto y planificación contigo.']];details.forEach((d,i)=>{if(!qs[i])return;const s=d.querySelector('summary'),p=d.querySelector('p');if(s)s.textContent=qs[i][0];if(p)p.textContent=qs[i][1];});}
+ const employment=pub.querySelector('#empleo');if(employment){const p=employment.querySelector('div>p:not(.eyebrow)');if(p)p.textContent='Carpintería, electricidad, soldadura y otros perfiles de taller. Si crees que puedes aportar al equipo, envía tu candidatura.';}
+ const contact=pub.querySelector('#contacto');if(contact){const h=contact.querySelector('h2');if(h)h.innerHTML='Tu camper empieza<br>con <em>una conversación.</em>';const first=contact.querySelector('[data-action="presupuesto"]');if(first)first.textContent='DISEÑAR MI CAMPER →';}
 })();
