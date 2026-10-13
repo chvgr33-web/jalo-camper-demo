@@ -153,3 +153,13 @@ body.public-mode{--paper:#FCFCFA;--cream:#F2EEE5;background:#FCFCFA}
 .public-mode footer{background:#FCFCFA}
 #publica .hero-shade{background:linear-gradient(180deg,rgba(252,252,250,.94),rgba(252,252,250,.7) 70%,rgba(252,252,250,0))}
 @media(max-width:1050px){#publica .hero-copy{background:#FCFCFA}}
+
+/* Phase 2: intentional public placeholders where real Jalo photography is still needed. */
+#publica .public-image-placeholder{background:linear-gradient(145deg,#DCEEEA,#F7F8F5);position:relative;overflow:hidden}
+#publica .photo-card.public-image-placeholder:before{content:'DISEÑO A MEDIDA';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#164B63;font-size:12px;font-weight:700;letter-spacing:2px;z-index:0}
+#publica .photo-card.public-image-placeholder:after{background:linear-gradient(transparent 15%,rgba(22,75,99,.92))}
+#publica .photo-card.public-image-placeholder>div{z-index:2}
+#publica .editorial-image.public-image-placeholder{min-height:390px;display:flex;align-items:flex-end}
+#publica .editorial-image.public-image-placeholder:before{content:'FOTO REAL DE PROYECTO JALO';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#164B63;font-size:12px;font-weight:700;letter-spacing:1.6px;text-align:center;padding:25px}
+#publica .preview-project.public-image-placeholder{padding-top:54px}
+#publica .preview-project.public-image-placeholder:before{content:'ÁREA CLIENTE · PROYECTO';display:block;margin:0 24px 18px;color:#168C8C;font-size:10px;font-weight:700;letter-spacing:1.5px}
