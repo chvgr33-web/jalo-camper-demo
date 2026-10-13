@@ -38,7 +38,7 @@ mobileEditor=function(type){window.mobilePhotoURL=null;if(type==='horas'){$('#mo
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const has=x=>b.hasAttribute(x);
 if(b.dataset.story)story(b.dataset.story);
 if(has('data-extra-accept')){demo.extraAccepted=true;refreshStory();story('extras');toast('Extra aceptado sólo en la demo.')}
-if(has('data-client-accept'))toast(demo.sent?'Aceptación ficticia registrada. No es un contrato.':'El administrador debe aprobar y simular el envío primero desde Gestión → Presupuestos.');
+if(has('data-client-accept')){if(demo.sent){demo.clientAccepted=true;toast('Aceptación ficticia registrada. No es un contrato.');$('#modal-body').insertAdjacentHTML('beforeend','<p class="pill">Cliente: aceptado en la demo</p>');}else toast('El administrador debe aprobar y simular el envío primero desde Gestión → Presupuestos.');}
 if(has('data-final-approve')){demo.approved=true;renderModule('presupuestos')}
 if(has('data-final-send')){if(!demo.approved)toast('Bloqueado: falta revisión del administrador.');else{demo.sent=true;toast('Envío simulado a Elena. No se ha enviado un correo.')}}
 if(has('data-classify')){demo.leadQualified=true;if(modal.open)modal.close();renderModule('crm');toast('IA propone: camperización, interés alto, pendiente de llamada humana.')}
@@ -58,3 +58,4 @@ if(b.dataset.view==='cliente')refreshStory();
 });
 document.addEventListener('submit',e=>{if(e.target.id==='checklist-demo'){e.preventDefault();demo.receipt=true;modal.close();toast('Acta ficticia completada: lista para planificar llegada a Tarifa.')}});
 refreshStory();
+
