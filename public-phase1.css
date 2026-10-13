@@ -43,7 +43,6 @@ body.public-mode{--paper:#F7F4ED;--ink:#252A2D;--muted:#53656D;--line:#D7E1DF;--
 #publica .contact-grid{border-color:#B9D0CB;color:#164B63}
 .public-mode footer{background:#F7F4ED;color:#164B63}
 .public-mode footer a:hover,.public-mode footer button:hover{color:#126E70}
-/* Hero: HTML over the open sky. No content baked into the supplied photograph. */
 #publica .hero{height:clamp(640px,48vw,800px);min-height:640px;background:#EDE5D6;overflow:hidden}
 #publica .hero>img{position:absolute;inset:0;height:100%;object-position:center}
 #publica .hero-shade{display:block;background:linear-gradient(180deg,rgba(247,244,237,.92),rgba(247,244,237,.68) 70%,rgba(247,244,237,0));left:47%;right:0;top:0;bottom:43%;mask-image:linear-gradient(to right,transparent,black 18%);pointer-events:none}
@@ -57,8 +56,7 @@ body.public-mode{--paper:#F7F4ED;--ink:#252A2D;--muted:#53656D;--line:#D7E1DF;--
 #publica .hero .white-link{color:#164B63;border-color:#168C8C;font-size:10px;font-weight:600;white-space:nowrap;letter-spacing:.4px}
 #publica .hero-bottom{bottom:13px;top:auto;justify-content:flex-end;font-size:8px;letter-spacing:0;color:#fff;text-shadow:0 1px 3px #252a2d}
 #publica .hero-bottom span{font-size:8px;color:#fff;opacity:.78;letter-spacing:0}
-/* Pickup remains the block immediately after the hero. */
-#publica .pickup{grid-template-columns:1fr 235px;gap:55px;background:#F7F4ED;padding-top:55px;padding-bottom:55px;border-bottom:1px solid #B7D6CF;align-items:center}
+#publica .pickup{grid-template-columns:1fr 235px;gap:55px;background:#F7F4ED;padding-top:55px;padding-bottom:55px;border-top:1px solid #DCEEEA;border-bottom:1px solid #B7D6CF;align-items:center}
 #publica .pickup-main{max-width:750px}
 #publica .pickup h2{font-size:clamp(31px,3vw,44px);margin-bottom:17px}
 #publica .pickup h2 em{color:#164B63}
@@ -70,93 +68,25 @@ body.public-mode{--paper:#F7F4ED;--ink:#252A2D;--muted:#53656D;--line:#D7E1DF;--
 #publica .pickup .pickup-actions .dark{font-size:10px;padding:13px 16px;white-space:nowrap}
 #publica .pickup .pickup-note{font-size:10px;line-height:1.65;color:#53656D;margin-top:16px;max-width:660px}
 @media(min-width:1750px){#publica .hero-copy{right:max(5%,calc((100vw - 1520px)/2));width:43%;top:8%}}
-@media(max-width:1050px){
-#publica .hero{height:auto;min-height:0;padding-top:53%;overflow:visible}
-#publica .hero>img{height:auto;aspect-ratio:1.78;object-fit:cover;object-position:center;bottom:auto}
-#publica .hero-shade{display:none}
-#publica .hero-copy{position:relative;left:auto;right:auto;top:auto;width:100%;height:auto;padding:35px 6% 38px;background:#F7F4ED}
-#publica .hero h1{font-size:clamp(44px,6vw,64px);max-width:650px}
-#publica .hero-major br{display:none}
-#publica .hero-copy>p:not(.eyebrow){font-size:15px;max-width:600px}
-#publica .hero-bottom{top:calc(53vw - 20px);bottom:auto;right:4%;left:auto}
-#publica .pickup{grid-template-columns:1fr 215px;gap:25px}
-}
-@media(max-width:760px){
-.public-mode .original-logo{width:117px;height:59px;padding:0}
-#publica .hero{padding-top:56.2%;height:auto;min-height:0}
-#publica .hero>img{height:auto;aspect-ratio:1.78;object-position:center}
-#publica .hero-copy{padding:30px 6% 34px}
-#publica .hero h1{font-size:41px;line-height:1.05;margin-bottom:18px}
-#publica .hero-major br{display:block}
-#publica .hero-kicker{font-size:10px;letter-spacing:1.4px;margin-bottom:13px}
-#publica .hero-copy>p:not(.eyebrow){font-size:13px;line-height:1.7}
-#publica .hero .actions{flex-wrap:wrap;gap:15px 19px}
-#publica .hero .cream{padding:14px 17px;font-size:10px}
-#publica .hero .white-link{font-size:9px}
-#publica .hero-bottom{top:calc(56.2vw - 18px);right:3%}
-#publica .hero-bottom span{font-size:7px}
-#publica .pickup{grid-template-columns:1fr;padding-top:35px;padding-bottom:35px;gap:22px}
-#publica .pickup .pickup-benefit{font-size:17px}
-#publica .pickup .pickup-description{font-size:13px}
-#publica .pickup .pickup-actions{padding:20px;flex-direction:row;align-items:center;flex-wrap:wrap;gap:15px}
-#publica .pickup .pickup-actions svg{width:32px;height:25px}
-#publica .pickup .pickup-note{font-size:10px;margin-top:16px}
-}
+@media(max-width:1050px){#publica .hero{height:auto;min-height:0;padding-top:53%;overflow:visible}#publica .hero>img{height:auto;aspect-ratio:1.78;object-fit:cover;object-position:center;bottom:auto}#publica .hero-shade{display:none}#publica .hero-copy{position:relative;left:auto;right:auto;top:auto;width:100%;height:auto;padding:35px 6% 38px;background:#F7F4ED}#publica .hero h1{font-size:clamp(44px,6vw,64px);max-width:650px}#publica .hero-major br{display:none}#publica .hero-copy>p:not(.eyebrow){font-size:15px;max-width:600px}#publica .hero-bottom{top:calc(53vw - 20px);bottom:auto;right:4%;left:auto}#publica .pickup{grid-template-columns:1fr 215px;gap:25px}}
+@media(max-width:760px){.public-mode .original-logo{width:117px;height:59px;padding:0}#publica .hero{padding-top:56.2%;height:auto;min-height:0}#publica .hero>img{height:auto;aspect-ratio:1.78;object-position:center}#publica .hero-copy{padding:30px 6% 34px}#publica .hero h1{font-size:41px;line-height:1.05;margin-bottom:18px}#publica .hero-major br{display:block}#publica .hero-kicker{font-size:10px;letter-spacing:1.4px;margin-bottom:13px}#publica .hero-copy>p:not(.eyebrow){font-size:13px;line-height:1.7}#publica .hero .actions{flex-wrap:wrap;gap:15px 19px}#publica .hero .cream{padding:14px 17px;font-size:10px}#publica .hero .white-link{font-size:9px}#publica .hero-bottom{top:calc(56.2vw - 18px);right:3%}#publica .hero-bottom span{font-size:7px}#publica .pickup{grid-template-columns:1fr;padding-top:35px;padding-bottom:35px;gap:22px}#publica .pickup .pickup-benefit{font-size:17px}#publica .pickup .pickup-description{font-size:13px}#publica .pickup .pickup-actions{padding:20px;flex-direction:row;align-items:center;flex-wrap:wrap;gap:15px}#publica .pickup .pickup-actions svg{width:32px;height:25px}#publica .pickup .pickup-note{font-size:10px;margin-top:16px}}
 @media(max-width:360px){#publica .hero h1{font-size:36px}#publica .hero .actions{gap:17px}#publica .hero .white-link{min-height:27px}}
 
-/* Phase 1.1: brighter coastal public palette and compact desktop headline. */
-.public-mode .demo-bar,#publica .social-section{background:#F7F4ED}
-#publica .contact{background:#DCEEEA}
-#publica h2,#publica h3{color:#164B63}
-#publica .photo-card h3,#publica .employment h2{color:#fff}
-#publica .process-grid article{border-top:2px solid #168C8C;padding-top:18px}
-#publica .eyebrow{color:#126E70}
-#publica .employment .eyebrow{color:#fff}
-#publica .hero h1{font-size:clamp(28px,2.75vw,49px);line-height:1.12}
-#publica .hero-major{white-space:nowrap}
-#publica .hero-copy{width:49%;right:3%;top:9%}
-.public-mode .pickup-question{border:1px solid #B8D6D3;padding:16px;margin:20px 0}
-.public-mode .pickup-question legend{font-weight:600;color:#164B63}
-.public-mode .pickup-question input[type=radio]{width:auto;margin-right:8px}
-.public-mode .pickup-question label{display:flex;align-items:center;gap:8px}
-.public-mode .pickup-location-note{font-size:11px}
+/* Phase 1.1 */
+.public-mode .demo-bar,#publica .social-section{background:#F7F4ED}#publica .contact{background:#DCEEEA}#publica h2,#publica h3{color:#164B63}#publica .photo-card h3,#publica .employment h2{color:#fff}#publica .process-grid article{border-top:2px solid #168C8C;padding-top:18px}#publica .eyebrow{color:#126E70}#publica .employment .eyebrow{color:#fff}#publica .hero h1{font-size:clamp(28px,2.75vw,49px);line-height:1.12}#publica .hero-major{white-space:nowrap}#publica .hero-copy{width:49%;right:3%;top:9%}.public-mode .pickup-question{border:1px solid #B8D6D3;padding:16px;margin:20px 0}.public-mode .pickup-question legend{font-weight:600;color:#164B63}.public-mode .pickup-question input[type=radio]{width:auto;margin-right:8px}.public-mode .pickup-question label{display:flex;align-items:center;gap:8px}.public-mode .pickup-location-note{font-size:11px}
 @media(max-width:1050px){#publica .hero-copy{width:100%;right:auto;top:auto}#publica .hero h1{font-size:clamp(38px,5vw,54px)}#publica .hero-major{white-space:normal}}
 @media(max-width:760px){#publica .hero h1{font-size:36px}}
 
-/* Phase 2: mobile public hero polish. Keep the approved photograph untouched. */
-@media(max-width:760px){
-#publica .hero-copy{padding:27px 6% 92px}
-#publica .hero h1{font-size:clamp(31px,9.2vw,36px);line-height:1.04;letter-spacing:-.03em;margin-bottom:18px;max-width:100%}
-#publica .hero-major{white-space:nowrap}
-#publica .hero-kicker{font-size:10px;letter-spacing:1.55px;margin-bottom:11px}
-#publica .hero-copy>p:not(.eyebrow){font-size:13px;line-height:1.65;margin-bottom:22px}
-#publica .hero .actions{display:grid;grid-template-columns:1fr;gap:12px;width:100%;max-width:330px;align-items:stretch}
-#publica .hero .cream,#publica .hero .white-link{box-sizing:border-box;width:100%;min-height:48px;display:flex;align-items:center;justify-content:center;padding:13px 16px;font-size:10px;line-height:1.2;text-align:center;white-space:nowrap}
-#publica .hero .white-link{border:1px solid #168C8C;text-decoration:none}
-.public-mode .chat-launch{right:16px;bottom:16px;min-width:0;width:auto;max-width:235px;padding:13px 17px;font-size:12px;box-shadow:0 8px 24px rgba(22,75,99,.18)}
-}
-@media(max-width:390px){
-#publica .hero h1{font-size:clamp(28px,8.7vw,34px)}
-#publica .hero-copy{padding-left:5%;padding-right:5%}
-#publica .hero .actions{max-width:none}
-.public-mode .chat-launch{max-width:205px;font-size:11px;padding:12px 15px}
-}
+/* Phase 2: mobile hero */
+@media(max-width:760px){#publica .hero-copy{padding:27px 6% 92px}#publica .hero h1{font-size:clamp(31px,9.2vw,36px);line-height:1.04;letter-spacing:-.03em;margin-bottom:18px;max-width:100%}#publica .hero-major{white-space:nowrap}#publica .hero-kicker{font-size:10px;letter-spacing:1.55px;margin-bottom:11px}#publica .hero-copy>p:not(.eyebrow){font-size:13px;line-height:1.65;margin-bottom:22px}#publica .hero .actions{display:grid;grid-template-columns:1fr;gap:12px;width:100%;max-width:330px;align-items:stretch}#publica .hero .cream,#publica .hero .white-link{box-sizing:border-box;width:100%;min-height:48px;display:flex;align-items:center;justify-content:center;padding:13px 16px;font-size:10px;line-height:1.2;text-align:center;white-space:nowrap}#publica .hero .white-link{border:1px solid #168C8C;text-decoration:none}.public-mode .chat-launch{right:16px;bottom:16px;min-width:0;width:auto;max-width:235px;padding:13px 17px;font-size:12px;box-shadow:0 8px 24px rgba(22,75,99,.18)}}
+@media(max-width:390px){#publica .hero h1{font-size:clamp(28px,8.7vw,34px)}#publica .hero-copy{padding-left:5%;padding-right:5%}#publica .hero .actions{max-width:none}.public-mode .chat-launch{max-width:205px;font-size:11px;padding:12px 15px}}
 
-/* Phase 2: brighter Atlantic canvas. Sand is now an accent, not the page background. */
-body.public-mode{--paper:#FCFCFA;--cream:#F2EEE5;background:#FCFCFA}
-.public-mode .header{background:#FCFCFA}
-.public-mode .demo-bar{background:#F7F8F5}
-#publica{background:#FCFCFA;--paper:#FCFCFA;--cream:#F2EEE5}
-#publica .hero{background:#FCFCFA}
-#publica .pickup{background:#FCFCFA}
-#publica .social-section{background:#F7F8F5}
-.public-mode footer{background:#FCFCFA}
-#publica .hero-shade{background:linear-gradient(180deg,rgba(252,252,250,.94),rgba(252,252,250,.7) 70%,rgba(252,252,250,0))}
-@media(max-width:1050px){#publica .hero-copy{background:#FCFCFA}}
+/* Phase 2: brighter Atlantic canvas */
+body.public-mode{--paper:#FCFCFA;--cream:#F2EEE5;background:#FCFCFA}.public-mode .header{background:#FCFCFA}.public-mode .demo-bar{background:#F7F8F5}#publica{background:#FCFCFA;--paper:#FCFCFA;--cream:#F2EEE5}#publica .hero{background:#FCFCFA}#publica .pickup{background:#FCFCFA}#publica .social-section{background:#F7F8F5}.public-mode footer{background:#FCFCFA}#publica .hero-shade{background:linear-gradient(180deg,rgba(252,252,250,.94),rgba(252,252,250,.7) 70%,rgba(252,252,250,0))}@media(max-width:1050px){#publica .hero-copy{background:#FCFCFA}}
 
-/* Phase 2: intentional public placeholders where real Jalo photography is still needed. */
+/* Phase 2: placeholders for photography still needed. Keep labels out of content. */
 #publica .public-image-placeholder{background:linear-gradient(145deg,#DCEEEA,#F7F8F5);position:relative;overflow:hidden}
-#publica .photo-card.public-image-placeholder:before{content:'DISEÑO A MEDIDA';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#164B63;font-size:12px;font-weight:700;letter-spacing:2px;z-index:0}
+#publica .photo-card.public-image-placeholder:before{content:'';display:none}
 #publica .photo-card.public-image-placeholder:after{background:linear-gradient(transparent 15%,rgba(22,75,99,.92))}
 #publica .photo-card.public-image-placeholder>div{z-index:2}
 #publica .editorial-image.public-image-placeholder{min-height:390px;display:flex;align-items:flex-end}
