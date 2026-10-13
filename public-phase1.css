@@ -55,9 +55,6 @@ body.public-mode{--paper:#F7F4ED;--ink:#252A2D;--muted:#53656D;--line:#D7E1DF;--
 #publica .hero .actions{gap:20px;flex-wrap:nowrap;align-items:center}
 #publica .hero .cream{font-size:10px;padding:14px 19px;white-space:nowrap;letter-spacing:.4px}
 #publica .hero .white-link{color:#164B63;border-color:#168C8C;font-size:10px;font-weight:600;white-space:nowrap;letter-spacing:.4px}
-#publica .pickup-pill{display:inline-flex;align-items:center;gap:8px;font-size:11px;color:#164B63;background:rgba(247,244,237,.88);border:1px solid #B7D6CF;padding:7px 13px;border-radius:30px;margin-top:17px;line-height:1.4;max-width:100%}
-#publica .pickup-pill:hover{background:#DCEEEA;border-color:#168C8C}
-#publica .hero-copy>.pickup-pill{display:flex;width:max-content;margin-left:auto}
 #publica .hero-bottom{bottom:13px;top:auto;justify-content:flex-end;font-size:8px;letter-spacing:0;color:#fff;text-shadow:0 1px 3px #252a2d}
 #publica .hero-bottom span{font-size:8px;color:#fff;opacity:.78;letter-spacing:0}
 /* Pickup remains the block immediately after the hero. */
@@ -78,7 +75,6 @@ body.public-mode{--paper:#F7F4ED;--ink:#252A2D;--muted:#53656D;--line:#D7E1DF;--
 #publica .hero>img{height:auto;aspect-ratio:1.78;object-fit:cover;object-position:center;bottom:auto}
 #publica .hero-shade{display:none}
 #publica .hero-copy{position:relative;left:auto;right:auto;top:auto;width:100%;height:auto;padding:35px 6% 38px;background:#F7F4ED}
-#publica .hero-copy>.pickup-pill{margin-left:0}
 #publica .hero h1{font-size:clamp(44px,6vw,64px);max-width:650px}
 #publica .hero-major br{display:none}
 #publica .hero-copy>p:not(.eyebrow){font-size:15px;max-width:600px}
@@ -97,7 +93,6 @@ body.public-mode{--paper:#F7F4ED;--ink:#252A2D;--muted:#53656D;--line:#D7E1DF;--
 #publica .hero .actions{flex-wrap:wrap;gap:15px 19px}
 #publica .hero .cream{padding:14px 17px;font-size:10px}
 #publica .hero .white-link{font-size:9px}
-#publica .pickup-pill{font-size:11px;margin-top:20px;padding:8px 12px}
 #publica .hero-bottom{top:calc(56.2vw - 18px);right:3%}
 #publica .hero-bottom span{font-size:7px}
 #publica .pickup{grid-template-columns:1fr;padding-top:35px;padding-bottom:35px;gap:22px}
@@ -108,3 +103,22 @@ body.public-mode{--paper:#F7F4ED;--ink:#252A2D;--muted:#53656D;--line:#D7E1DF;--
 #publica .pickup .pickup-note{font-size:10px;margin-top:16px}
 }
 @media(max-width:360px){#publica .hero h1{font-size:36px}#publica .hero .actions{gap:17px}#publica .hero .white-link{min-height:27px}}
+
+/* Phase 1.1: brighter coastal public palette and compact desktop headline. */
+.public-mode .demo-bar,#publica .social-section{background:#F7F4ED}
+#publica .contact{background:#DCEEEA}
+#publica h2,#publica h3{color:#164B63}
+#publica .photo-card h3,#publica .employment h2{color:#fff}
+#publica .process-grid article{border-top:2px solid #168C8C;padding-top:18px}
+#publica .eyebrow{color:#126E70}
+#publica .employment .eyebrow{color:#fff}
+#publica .hero h1{font-size:clamp(28px,2.75vw,49px);line-height:1.12}
+#publica .hero-major{white-space:nowrap}
+#publica .hero-copy{width:49%;right:3%;top:9%}
+.public-mode .pickup-question{border:1px solid #B8D6D3;padding:16px;margin:20px 0}
+.public-mode .pickup-question legend{font-weight:600;color:#164B63}
+.public-mode .pickup-question input[type=radio]{width:auto;margin-right:8px}
+.public-mode .pickup-question label{display:flex;align-items:center;gap:8px}
+.public-mode .pickup-location-note{font-size:11px}
+@media(max-width:1050px){#publica .hero-copy{width:100%;right:auto;top:auto}#publica .hero h1{font-size:clamp(38px,5vw,54px)}#publica .hero-major{white-space:normal}}
+@media(max-width:760px){#publica .hero h1{font-size:36px}}
