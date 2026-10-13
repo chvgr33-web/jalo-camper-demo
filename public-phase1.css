@@ -122,3 +122,22 @@ body.public-mode{--paper:#F7F4ED;--ink:#252A2D;--muted:#53656D;--line:#D7E1DF;--
 .public-mode .pickup-location-note{font-size:11px}
 @media(max-width:1050px){#publica .hero-copy{width:100%;right:auto;top:auto}#publica .hero h1{font-size:clamp(38px,5vw,54px)}#publica .hero-major{white-space:normal}}
 @media(max-width:760px){#publica .hero h1{font-size:36px}}
+
+/* Phase 2: mobile public hero polish. Keep the approved photograph untouched. */
+@media(max-width:760px){
+#publica .hero-copy{padding:27px 6% 92px}
+#publica .hero h1{font-size:clamp(31px,9.2vw,36px);line-height:1.04;letter-spacing:-.03em;margin-bottom:18px;max-width:100%}
+#publica .hero-major{white-space:nowrap}
+#publica .hero-kicker{font-size:10px;letter-spacing:1.55px;margin-bottom:11px}
+#publica .hero-copy>p:not(.eyebrow){font-size:13px;line-height:1.65;margin-bottom:22px}
+#publica .hero .actions{display:grid;grid-template-columns:1fr;gap:12px;width:100%;max-width:330px;align-items:stretch}
+#publica .hero .cream,#publica .hero .white-link{box-sizing:border-box;width:100%;min-height:48px;display:flex;align-items:center;justify-content:center;padding:13px 16px;font-size:10px;line-height:1.2;text-align:center;white-space:nowrap}
+#publica .hero .white-link{border:1px solid #168C8C;text-decoration:none}
+.public-mode .chat-launch{right:16px;bottom:16px;min-width:0;width:auto;max-width:235px;padding:13px 17px;font-size:12px;box-shadow:0 8px 24px rgba(22,75,99,.18)}
+}
+@media(max-width:390px){
+#publica .hero h1{font-size:clamp(28px,8.7vw,34px)}
+#publica .hero-copy{padding-left:5%;padding-right:5%}
+#publica .hero .actions{max-width:none}
+.public-mode .chat-launch{max-width:205px;font-size:11px;padding:12px 15px}
+}
